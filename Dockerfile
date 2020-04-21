@@ -11,8 +11,7 @@ RUN mkdir /var/run/sshd
 RUN sed 's/PermitRootLogin without-password/PermitRootLogin yes/' -i /etc/ssh/sshd_config
 
 # Website resources
-WORKDIR /usr/share/nginx/html
-COPY p3-devops.com .
+COPY p3-devops.com /var/www/html
 
 EXPOSE 80 22
 
